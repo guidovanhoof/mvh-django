@@ -1,0 +1,12 @@
+{% extends 'common/main.html' %}
+
+{% block content %}
+    <main class="container">
+        <div class="bg-light p-5 rounded">
+            <h1>Overzicht kalenders</h1>
+            {% for kalender in kalenders %}
+                <div><a href="{% url 'kalender' kalender.jaar %}">Kalender {{ kalender.jaar }}</a></div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}
